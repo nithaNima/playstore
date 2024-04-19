@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:playstore/screens/apps/categoriesapp.dart';
 import 'package:playstore/screens/apps/childrenapp.dart';
-import 'package:playstore/screens/apps/foreyouapp.dart';
+//import 'package:playstore/screens/apps/foreyou.dart';
+import 'package:playstore/screens/apps/foryou2.dart';
+//import 'package:playstore/screens/apps/foreyouapp.dart';
 import 'package:playstore/screens/apps/topchartapp.dart';
+import 'package:playstore/widgets/foreyouapp.dart';
 
 
 class Apps extends StatefulWidget {
@@ -35,7 +38,7 @@ appBar: AppBar(
     ),
 ),
 body: const TabBarView(children: [
-   foreyouAPP(),
+ for_you(),
    topchartapp(),
    childrenapp(),
    categoriesapp()

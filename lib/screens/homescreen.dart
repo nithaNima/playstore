@@ -90,11 +90,11 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Apps',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_offer),
+            icon: Icon(Icons.local_offer_outlined),
             label: 'Offers',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.book_outlined),
             label: 'Books',
           ),
 
