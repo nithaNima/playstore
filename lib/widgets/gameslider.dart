@@ -1,47 +1,52 @@
-import 'package:flutter/material.dart';
-import 'package:playstore/models/foreyouappmodel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:playstore/models/gameslidermodel.dart';
 
-class foreyouAPP extends StatefulWidget {
-  const foreyouAPP({super.key});
+class Gameslider extends StatefulWidget {
+  const Gameslider({super.key});
 
   @override
-  State<foreyouAPP> createState() => _foreyouAPPState();
+  State<Gameslider> createState() => _GamesliderState();
 }
 
-class _foreyouAPPState extends State<foreyouAPP> {
-  List<AppForeyou> imglist = [
-    AppForeyou(
-      img:
-          "https://play-lh.googleusercontent.com/Nw3VaIBzAgJdApPkVT1CyDKQ3b2mlJyBq4ksH9TyrxlR4AxeK2Sz9ekFkSfFl_hiRQ=w851-h2160-rw",
-      title:
-          "Witness IPL's Epic Encounters! Your IPL Seat Awaits on BookMyS...  ",
-      subtitle: "BookMyShow",
-      caption: "4.2  Rated for 12+",
-      logo:
-          "https://sg-res.9appsdownloading.com/sg/res/jpg/47/1c/8aee9ccfcda17ad00d0d8f1d7ebd-j6d.jpg",
-    
-    ),
-    AppForeyou(
-      img:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBYOSkR1CBcRBCNlufW_ahEC8iHZnARypE8UPQObTLA&s",
-      title:
-          "Audible Audio books and podcasts",
-      subtitle: "AudioBooks",
-      caption: "4.0  Rated for 10+",
-      logo:
-          "https://play-lh.googleusercontent.com/pwzZK-7oQexraeU0mOrQgFIck-QSS89rH0eWjehctp8XskRSpixPNVlA0YYlRXHbA2Iz=s48-rw",
-      
-    )
+class _GamesliderState extends State<Gameslider> {
+  List<Gslider> list = [
+    Gslider(
+        img:
+            "https://play-lh.googleusercontent.com/Go_l4-iSF6OAzP6yxlh0CbbUXTrd24i_MY1yUIdDvC1PxU6rykPExufgQlZjDNhPfMc=w526-h296-rw",
+        title: "Find your destiny and explore this ethereal fantasy RPG",
+        subtitle: "AFK journey",
+        caption: "4.2  Rated for 12+",
+        logo:
+            "https://play-lh.googleusercontent.com/R3uPV6IlI_xkiqw98gSo7RFJ4UL4i7z-su3AYcCNSU-valWSVHoewAG-fkpp6BVMB2oy=w240-h480-rw",
+            heading: "Now available"),
+    Gslider(
+        img:
+            "https://play-lh.googleusercontent.com/tp94yUIYX1rW8RQZGQQIPR35t71-oObL48ZIeWbyHgu1rchO1kt1SW71KoHNhxM-xceI=w851-h2160-rw",
+        title: "Conquer new challenges in every day in the Streak event",
+        subtitle: "Clash of Clans",
+        caption: "3.9 Rated for 10+",
+        logo:
+            "https://play-lh.googleusercontent.com/LByrur1mTmPeNr0ljI-uAUcct1rzmTve5Esau1SwoAzjBXQUby6uHIfHbF9TAT51mgHm=s64-rw",
+            heading: "Ends in 6d"),
+    Gslider(
+        img:
+            "https://play-lh.googleusercontent.com/mBJ76FAXX5LPrcHXCdq2GwHS_4m7HtKqKwncesalkKtPFalxMUhQopkaaTy0CeNsozw6=w851-h2160-rw",
+        title: "Welcome a new pet to your farm: a wooly Llama",
+        subtitle: "Solitare Grand Ha..",
+        caption: "3.5 Rated for 11+",
+        logo:
+            "https://play-lh.googleusercontent.com/VFS1D7o4sI6O96inUzrJP559t9RUvUwiHJ7mYTX4opmoABfxHfSYBZzX7RbEkjDXc-g=s64-rw",
+            heading: "Update available")
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: CarouselSlider(
+      body: SafeArea(child:
+      CarouselSlider(
         options: CarouselOptions(height: 300.0, viewportFraction: 1,
         enableInfiniteScroll: false),
-        items: imglist.map((i) {
+        items: list.map((i) {
           return Builder(
             builder: (BuildContext context) {
               return Padding(
@@ -57,7 +62,7 @@ class _foreyouAPPState extends State<foreyouAPP> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
 
-                      Text("Trending",
+                      Text(i.heading,
                       style: TextStyle(color: Color.fromARGB(255, 249, 249, 249),
                       backgroundColor: Colors.grey.shade500),
                       ),
@@ -105,18 +110,13 @@ class _foreyouAPPState extends State<foreyouAPP> {
         
       ),
 
-     
-      
-      
-
 
       
-      
-
-
-
       ),
+
+
+      
+
     );
   }
 }
-

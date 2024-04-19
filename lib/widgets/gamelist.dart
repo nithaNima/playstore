@@ -1,53 +1,54 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:playstore/models/formodel.dart';
-import 'package:playstore/widgets/foreyouapp.dart';
+import 'package:playstore/models/gamelistmodel.dart';
 
-class foryou extends StatefulWidget {
-  const foryou({super.key});
+class Gamelist extends StatefulWidget {
+  const Gamelist({super.key});
 
   @override
-  State<foryou> createState() => _foryouState();
+  State<Gamelist> createState() => _GamelistState();
 }
 
-class _foryouState extends State<foryou> {
-  List<ForYou> list = [
-    ForYou(logo:
-            "https://play-lh.googleusercontent.com/r9zF77jorOmkaRlXnvsLiuVQ3p_gYW8y7x_UL-COoH9PxaTUEMbW1wiwS0z1n1Q31Q=s64-rw",
-        title: "Photoshop Express",
-        subtitle1: "Editing . Creating ideas",
-        subtitle2: "4.6 ★  234 MB",
-       
-        logo2: "https://play-lh.googleusercontent.com/uqq6a-fHayQxsNQkxB9ZZXag8N7Du5mOEKcScr9yltHqx3RKgCdr9VJHKGO2vY_GUe0=s64-rw",
-        title2: "Battlegrounds Mobile India",
-        subtitle3: "Action . Tactical shooter",
-        subtitle4: "4.4 ★  0.93 GB",
-        logo3: "https://play-lh.googleusercontent.com/m2BsUgJ58MdwwzVRcxCr7JBgfrP7tfHHETJnJ5yI2fMY8mT2SvSas20Iyy099774gxzt=s64-rw",
-        title3: "Chamet",
-        subtitle5: "Social . Dating . Networking",
-        subtitle6: "4.1 ★  107 MB"),
-        ForYou(logo:
-            "https://play-lh.googleusercontent.com/JayAs215bUQgX_60ksPhtcSAv5AS_FDz_lYQT2WywJ-BuCICL4vmyhN4H1tGqSqo2Q=s256-rw",
-        title: "H&M",
-        subtitle1: "Fashion . Shopping",
-        subtitle2: "4.6 ★  234 MB",
-       
-        logo2: "https://play-lh.googleusercontent.com/HArtbyi53u0jnqhnnxkQnMx9dHOERNcprZyKnInd2nrfM7Wd9ivMNTiz7IJP6-mSpwk=s64-rw",
-        title2: "Google pay",
-        subtitle3: "Finance . Payments",
-        subtitle4: "4.4 ★   0.93 GB",
-        logo3: "https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s64-rw",
-        title3: "WhatsApp Messanger",
-        subtitle5: "Calling . Dating . Chatting",
-        subtitle6: "4.1 ★  107 MB")
-
-    
+class _GamelistState extends State<Gamelist> {
+  List<Glist> list = [
+    Glist(
+        logo:
+            "https://play-lh.googleusercontent.com/alCSQLIJVL4VB9OtGATP7f503VojDSgl_V78Zzz8AvGxfs1xaEmIFoVWrKtjigjPMecH=s64-rw",
+        title: "Subway Surfers",
+        subtitle1: "Action . Runner .Offline",
+        subtitle2: "4.4 ★   0.93 GB",
+        logo2:
+            "https://play-lh.googleusercontent.com/L4-Oa6O8GV4I23JTmo-xKSjfyjowc0d2uGGfdScYkCTMk6ftxTwGowdAjgh2nOrJlEmI=s64-rw",
+        title2: "Brain Test-Tricky Puzzles",
+        subtitle3: "Puzzle . Search . Casual ",
+        subtitle4: "4.1 ★   78 MB",
+        logo3:
+            "https://play-lh.googleusercontent.com/eJ9OJnbRer1jjg5ZeNAnTXKcGd2B_NEqxCp2UsefcCABeFBaj_pNl_WKYBjup2GVGGc=s64-rw",
+        title3: "Fruit Ninja",
+        subtitle5: "Strategy . Multiplayer",
+        subtitle6: "3.1 ★   83 MB"),
+    Glist(
+        logo:
+            "https://play-lh.googleusercontent.com/TLUeelx8wcpEzf3hoqeLxPs3ai1tdGtAZTIFkNqy3gbDp1NPpNFTOzSFJDvZ9narFS0=s64-rw",
+        title: "Candy Crush",
+        subtitle1: "Puzzle . Match .Casual",
+        subtitle2: "4.3 ★   145 MB",
+        logo2:
+            "https://play-lh.googleusercontent.com/2fdEgYhRnpPRTSJLcJ7CpZ9-dFcfbNrP-BYVzzUoCwXyVBMRMVtBUrce0k_l-dV62ps=s64-rw",
+        title2: "Hill Climb Racing 2 ",
+        subtitle3: "Racing . Offline .Casual",
+        subtitle4: "4.0 ★   123 MB",
+        logo3:
+            "https://play-lh.googleusercontent.com/bPz1guJ6FHF3oIOEy3KqwpaDDKO-hLRaZoyzmM8bLFLN8fWm6L0_EuUnkwv9iqPo3Ag=s64-rw",
+        title3: "8 Ball Pool",
+        subtitle5: "Multiplayer . Simulation",
+        subtitle6: "3.9 ★   111 MB")
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+     body: SafeArea(
           child: Column(
         children: [
           
@@ -103,7 +104,9 @@ class _foryouState extends State<foryou> {
             }).toList(),
           ),
         ],
-      )),
+          )),
+
+
     );
   }
 }
