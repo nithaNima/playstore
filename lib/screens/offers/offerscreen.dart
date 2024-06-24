@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:playstore/widgets/book1.dart';
+import 'package:playstore/widgets/offerone.dart';
 
 class offers extends StatelessWidget {
   const offers({super.key});
@@ -56,11 +58,30 @@ class offers extends StatelessWidget {
           ),
          ),
           ListTile(
-                leading: Text("Offers for games that you may like",
+                leading: Text("Games on sale",
                 style: TextStyle(
             fontWeight: FontWeight.w500,fontSize: 18,color: Colors.black87
            ),),
+           trailing: Icon(Icons.arrow_forward),
               ),
+              SizedBox(
+                width: 500,
+                height: 233,
+                child: offerone(),
+              ),
+              ListTile(
+                 leading: Text("Price drops on books",
+                style: TextStyle(
+            fontWeight: FontWeight.w500,fontSize: 18,color: Colors.black87
+           ),),
+           trailing: Icon(Icons.arrow_forward),
+              ),
+              SizedBox(
+                //width: 500,
+                height: 500,
+                child: Books1(),
+
+              )
               
         ],
       )),
